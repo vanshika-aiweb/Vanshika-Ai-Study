@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vanshika AI Study Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 700px;
+            margin: 70px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 13px 30px;
+            font-size: 17px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: white;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .answer {
+            margin-top: 25px;
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            min-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>✨ Vanshika AI Study Assistant</h1>
+
+    <p>📚 Ask your study question</p>
+
+    <textarea id="question"
+        placeholder="Type your question here..."></textarea>
+
+    <br>
+
+    <button onclick="answerQuestion()">Ask Assistant 🤖</button>
+
+    <div class="answer" id="answer">
+        Your answer will appear here...
+    </div>
+
+</div>
+
+<script>
+function answerQuestion() {
+    let question = document.getElementById("question").value.toLowerCase();
+    let answer = "";
+
+    if (question.includes("photosynthesis")) {
+        answer = "🌱 Photosynthesis is the process by which green plants use sunlight, water and carbon dioxide to make food and release oxygen.";
+    } 
+    else if (question.includes("gravity")) {
+        answer = "🌍 Gravity is the force that pulls objects toward each other. Earth's gravity keeps us on the ground.";
+    } 
+    else if (question.includes("computer")) {
+        answer = "💻 A computer is an electronic device that processes data and performs tasks according to instructions.";
+    } 
+    else {
+        answer = "🤖 I received your question. This is our first version of Vanshika AI Study Assistant. More AI features are coming soon!";
+    }
+
+    document.getElementById("answer").innerHTML = answer;
+}
+</script>
+</body>
+</html>
+
